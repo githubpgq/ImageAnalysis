@@ -122,7 +122,7 @@ function saveImageToContainer(imageName, imagePath) {
 }
 
 app.get('/', function(req, res) {
-    res.render("index.html");
+    res.render("main.html");
 });
 
 app.get('/photos', function(req, res) {
