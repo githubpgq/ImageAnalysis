@@ -16,7 +16,7 @@ app.use(express.static(__dirname));
 app.set('views', __dirname);
 app.set('view engine', 'html');
 
-app.post('/scan_photo', multipartMiddleware, function(req, resp) {
+app.post('/', multipartMiddleware, function(req, resp) {
     var imageInfo = {};
     if (req.body.photourl) {
         var photourl = req.body.photourl;
