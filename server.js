@@ -15,6 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname));
 app.set('views', __dirname);
 app.set('view engine', 'html');
+app.engine('html', require('ejs').renderFile);
 
 app.post('/', multipartMiddleware, function(req, resp) {
     var imageInfo = {};

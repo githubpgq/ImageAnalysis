@@ -11,6 +11,7 @@
   "dependencies": {
     "azure-storage": "^2.1.0",
     "body-parser": "^1.17.2",
+    "ejs": "^2.5.6",
     "express": "^4.15.3",
     "multipart": "^0.1.5",
     "node-oxford-emotion": "^1.0.4",
