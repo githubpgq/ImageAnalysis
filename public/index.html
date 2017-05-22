@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Location photos</title>
+</head>
+<body>
+<div id="contact">
+    <h1>Scan photo</h1>
+    <form action="http://localhost:3000/scan_photo" 
+      enctype="multipart/form-data"
+      method="POST">
+        <fieldset>
+            <label for="photo_url">Photo URL:</label>
+            <input type="text" id="photourl" name="photourl" placeholder="Enter photo URL" value="https://cdn.tinybuddha.com/wp-content/uploads/2011/03/Group-of-Friends.jpg" />
+            <br>
+            <label for="photo_upload">Photo:</label>
+            <input type="file" id="photo" name="photo" accept="image/*" placeholder="Upload photo" />
+            <br>
+            <input type="submit" value="Scan photo" />
+        </fieldset>
+    </form>
+    <form action="http://localhost:3000/photos"
+          method="GET">
+          <input type="submit" value="See photos">
+    </form>
+</div>
+</body>
+</html>

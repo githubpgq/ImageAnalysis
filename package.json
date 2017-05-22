@@ -9,7 +9,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "Express": "^3.0.1",
-    "express": "^4.15.3"
+    "azure-storage": "^2.1.0",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "multipart": "^0.1.5",
+    "node-oxford-emotion": "^1.0.4",
+    "tedious": "^2.0.0",
+    "uuid": "^3.0.1"
   }
 }
