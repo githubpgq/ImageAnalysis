@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 80;
 var bodyParser = require('body-parser');
 var oxfordEmotion = require("node-oxford-emotion")("b87c8eed78d04440b09d31c7c5eb5043")
 var multipart = require('connect-multiparty');
