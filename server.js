@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var port = process.env.PORT || 80;
+var port = process.env.PORT || 3000;
 var bodyParser = require('body-parser');
 var oxfordEmotion = require("node-oxford-emotion")("b87c8eed78d04440b09d31c7c5eb5043")
 var multipart = require('connect-multiparty');
@@ -11,8 +11,10 @@ const uuidV4 = require('uuid/v4');
 var Connection = require('tedious').Connection;
 var Request = require('tedious').Request;
 
-app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(__dirname));
+app.set('views', __dirname);
+app.set('view engine', 'html');
 
 app.post('/scan_photo', multipartMiddleware, function(req, resp) {
     var imageInfo = {};
@@ -120,7 +122,7 @@ function saveImageToContainer(imageName, imagePath) {
 }
 
 app.get('/', function(req, res) {
-    res.render("./public/index.html");
+    res.render("index.html");
 });
 
 app.get('/photos', function(req, res) {
